@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  /* Created with https://www.css-gradient.com */
+  background: #4d8b74;
+  background: -webkit-linear-gradient(bottom left, #4d8b74, #348b4d);
+  background: -moz-linear-gradient(bottom left, #4d8b74, #348b4d);
+  background: linear-gradient(to top right, #4d8b74, #348b4d);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 1px solid green;
+  min-height: 100vh;
+}
+
+.alphabet-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 0.2rem;
+  background: rgba(0, 0, 0, 0.095);
+}
+
+.alphabet-wrapper > button {
+  background: rgba(0, 0, 0, 0.175);
+  border: none;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.alphabet-wrapper > button:hover {
+  background: rgba(0, 0, 0, 0.231);
+}
+
+.alphabet-wrapper > button:active {
+  background: rgba(0, 0, 0, 0.36);
+}
+
+.hangman-stats {
+  display: flex;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+.hangman-body {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hangman-body-container {
+  width: 50%;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.head {
+  width: 40px;
+  height: 45px;
+  border: 2px solid rgb(255, 255, 255);
+  background: #4d8b74;
+  background: -webkit-linear-gradient(bottom left, #4d8b74, #348b4d);
+  background: -moz-linear-gradient(bottom left, #4d8b74, #348b4d);
+  background: linear-gradient(to top right, #4d8b74, #348b4d);
+  border-radius: 50%;
+}
+
+.torso {
+  width: 5px;
+  height: 50px;
+  background: white;
+}
+
+.arms {
+  display: flex;
+}
+
+.legs {
+  margin-top: 9px;
+  display: flex;
+}
+
+.left-arm,
+.left-leg {
+  position: relative;
+  right: 13px;
+  width: 5px;
+  height: 35px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.right-arm,
+.right-leg {
+  position: relative;
+  left: 13px;
+  width: 5px;
+  height: 35px;
+  background: white;
+  transform: rotate(-45deg);
+}
+
+.hangman {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+}
+
+.hangman-word-display {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 1.5rem;
+}
+
+.word {
+  border-bottom: 4px solid rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 0.4rem;
+  margin: 0 0.2rem;
+  text-transform: uppercase;
+}
+
+.red {
+  color: red;
+}
+
+.disable {
+  background: transparent;
+  border-color: transparent;
+}
+
+.disable-word {
+  color: transparent;
+}
+
+@media (min-width: 900px) {
+  .alphabet-wrapper {
+    gap: 10px;
+    width: 65rem;
+    max-width: 95%;
+    margin: 0 auto 2rem auto;
+  }
+
+  .alphabet-wrapper > button {
+    padding: 0.4rem;
+  }
+}
